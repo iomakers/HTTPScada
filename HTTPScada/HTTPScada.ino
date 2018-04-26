@@ -15,11 +15,11 @@
  #include <HTTPClient.h>
 
 
-const char* ssid = "yourNetworkName";
-const char* password = "yourNetworkPassword";
+const char* ssid = "ScadaBR";
+const char* password = "ScadaBRunp";
 //
 // caminho do ScadaBR
-String  ScadaBRpath = "http://192.168.0.10:8080/ScadaBR/httpds?__device=esp32"
+String  ScadaBRpath = "http://192.168.0.13:8050/ScadaBR/httpds?__device=esp32";
 
 void setup() {
 
@@ -44,8 +44,8 @@ void loop(){
       // dado a ser transmitido
       float dado = 10;
       String dadoString = String(dado);
-      String requisicao =  ScadaBRpath + "?dado=" + dadoString;
-
+      String requisicao =  ScadaBRpath + "&dado=" + dadoString;
+      Serial.println(requisicao);
       http.begin(requisicao);
       int httpCode = http.GET(); // realizar requisição
 
@@ -63,7 +63,7 @@ void loop(){
       http.end(); //Free the resources
     }
 
-    delay(10000);
+    delay(2000);
 
 
 

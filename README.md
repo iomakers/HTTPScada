@@ -1,4 +1,4 @@
-# HTTPScada
+# HTTPScada PT
 
 # Objetivo
 
@@ -20,3 +20,5 @@ O ScadaBR necessita de ser configurado em HTTP receiver, a partir desse momento 
 Para enviar um dado com nome "dado" com valor 10 vindo do dispositivo chamado "esp32" realiza-se a seguinte requisição.
 
 "http://MeuCaminho/httpds?__device=esp32&dado=10"
+
+# HTTPScada EN
